@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<DataTemplate
+    x:Class="MemoryLeakTest.DatePickerTemplate"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:memoryLeakTest="clr-namespace:MemoryLeakTest"
+    x:DataType="memoryLeakTest:ItemViewModel">
+    <Grid ColumnDefinitions="auto, *">
+        <Label
+            Grid.Column="0"
+            FontAttributes="Bold"
+            Text="{Binding Label}" />
+
+        <memoryLeakTest:LogDatePicker
+            Grid.Column="1"
+            Date="{Binding Value}"
+            FontAttributes="Italic"
+            IsEnabled="{Binding IsEnabled}">
+            <memoryLeakTest:LogDatePicker.Behaviors>
+                <memoryLeakTest:ZombieBehavior />
+            </memoryLeakTest:LogDatePicker.Behaviors>
+        </memoryLeakTest:LogDatePicker>
+    </Grid>
+</DataTemplate>

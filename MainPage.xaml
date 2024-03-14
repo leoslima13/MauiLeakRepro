@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MemoryLeakTest.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:memoryLeakTest="clr-namespace:MemoryLeakTest"
+    x:DataType="memoryLeakTest:MainPageViewModel"
+    ControlTemplate="{StaticResource MainTemplate}">
+
+    <Grid Padding="10" RowDefinitions="*, auto">
+        <CollectionView Grid.Row="0" ItemsSource="{Binding Items}">
+            <CollectionView.ItemTemplate>
+                <memoryLeakTest:CollectionViewTemplateSelector />
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <Button
+            Grid.Row="1"
+            Command="{Binding NavigateForward}"
+            Text="Navigate Forward" />
+    </Grid>
+
+</ContentPage>

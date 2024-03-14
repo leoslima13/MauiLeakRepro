@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <ControlTemplate x:Key="MainTemplate">
+        <Grid RowDefinitions="*, auto">
+            <ContentPresenter Grid.Row="0" />
+            <Grid
+                Grid.Row="1"
+                BackgroundColor="LightBlue"
+                ColumnDefinitions="auto, auto, *">
+                <Button
+                    Grid.Column="0"
+                    Command="{TemplateBinding BindingContext.CollectGCCommand}"
+                    Text="Collect GC" />
+                <Button
+                    Grid.Column="1"
+                    Command="{TemplateBinding BindingContext.CollectTotalMemoryCommand}"
+                    Text="Check Total Memory" />
+                <Label
+                    Grid.Column="2"
+                    FontAttributes="Bold"
+                    Text="{TemplateBinding BindingContext.TotalMemory,
+                                           StringFormat='Total Memory: {0}'}"
+                    TextColor="Black" />
+            </Grid>
+        </Grid>
+    </ControlTemplate>
+</ResourceDictionary>

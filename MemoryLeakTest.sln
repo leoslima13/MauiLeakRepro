@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemoryLeakTest", "MemoryLeakTest.csproj", "{6DBA3268-6C04-45F7-803D-BD1178CD2C08}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6DBA3268-6C04-45F7-803D-BD1178CD2C08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DBA3268-6C04-45F7-803D-BD1178CD2C08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DBA3268-6C04-45F7-803D-BD1178CD2C08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DBA3268-6C04-45F7-803D-BD1178CD2C08}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
